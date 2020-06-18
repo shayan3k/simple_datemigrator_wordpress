@@ -1,0 +1,95 @@
+////////////
+//Configs
+////////////
+
+* {
+  scroll-behavior: smooth;
+}
+
+.bg-white {
+  background-color: white !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.c-black {
+  color: black !important;
+}
+
+.font-sm {
+  font-size: 0.75rem;
+}
+
+.c-red {
+  color: red !important;
+}
+////////////
+//styles
+////////////
+.menu-content > ul li > a {
+  &.login {
+    color: rgb(245, 245, 138);
+  }
+
+  &.logout {
+    color: rgb(245, 107, 52);
+  }
+
+  font-size: 1em !important;
+}
+
+main .page-title .container {
+  z-index: 0 !important;
+}
+
+#map {
+  min-height: 400px;
+  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.payouts {
+  color: rgb(123, 236, 17) !important;
+  font-weight: 700;
+}
+
+.text-red {
+  color: red !important;
+}
+
+.testimonial-wrapper .testimonial-item .image-unaccepted {
+  border: 7px solid rgb(235, 132, 132) !important;
+}
+
+.big-checkbox {
+  width: 30px;
+  height: 30px;
+}
+
+.plan-animation {
+  transform: scale(1.05);
+  border: 1px solid black !important;
+}
+
+.button-animation {
+  background-color: red;
+}
+
+.nav-menu {
+  li {
+    .btn {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+header .logo img {
+  max-height: 100px !important;
+  max-width: 100px !important;
+}
