@@ -96,6 +96,14 @@ header .logo img {
   max-width: 100px !important;
 }
 
+.banner-effect {
+  cursor: pointer;
+}
+
+.banner-effect span {
+  color: black;
+}
+
 /* vietnamese */
 @font-face {
   font-family: "Quicksand";
@@ -440,7 +448,7 @@ header {
   right: 0;
   top: 0;
   margin: auto;
-  z-index: 1;
+  z-index: 2;
 }
 
 header .logo img {
@@ -562,7 +570,7 @@ header .menu-aside {
   width: 350px;
   background-color: #ffffff;
   padding: 30px;
-  z-index: 3;
+  z-index: 15;
   overflow: auto;
   transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -666,7 +674,7 @@ header .overal {
   height: 100%;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 2;
+  z-index: 14;
   transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -717,7 +725,7 @@ header #open-menu:hover {
 }
 
 header .header-nav {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 10px 0;
   margin-bottom: 1rem;
   color: #ffffff;
@@ -775,7 +783,6 @@ header .header-menu.fixed {
   left: 0;
   top: 0;
   width: 100%;
-  height: 60px;
   padding: 0 6%;
   background: #ffffff;
   -webkit-box-shadow: 0px 0px 50px -12px #202020;
@@ -801,7 +808,7 @@ header .header-menu.fixed .menu-content ul li.has-children > a::after {
 
 main {
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
 main .title-section {
@@ -1176,7 +1183,7 @@ main .testimonial-wrapper .owl-theme .owl-dots {
 
 main .page-title {
   position: relative;
-  padding: 220px 0 110px 0;
+  padding: 260px 0 100px 0;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1265,10 +1272,6 @@ main .form-wrapper .title_up {
   color: #444;
   text-transform: capitalize;
   margin-bottom: 1.5rem;
-}
-
-main .form-wrapper input {
-  text-transform: capitalize;
 }
 
 main .form-wrapper textarea {
@@ -1851,49 +1854,14 @@ main .news-wrapper .text-center .btn {
   text-transform: uppercase;
 }
 
-main .nav-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #ddd;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+main .dashboard-wrapper {
+  position: relative;
 }
 
-main .nav-menu li {
-  margin: 10px 5px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-main .nav-menu li .btn {
+main .dashboard-wrapper .container-fluid::after {
+  content: "";
+  clear: both;
   display: block;
-  text-align: center;
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main .nav-menu li.active .btn {
-  background-color: #343a40;
-  text-decoration: underline;
 }
 
 main .filters label {
@@ -1919,8 +1887,8 @@ main .tabs {
   padding-left: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   margin: 0;
   border: 1px solid #efefef;
 }
@@ -1979,7 +1947,115 @@ main .tabs-panel.active {
   -o-transform: translateY(0px);
 }
 
+main .container-fluid {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+main .grid-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33.33333% 33.3333% 33.3333%;
+      grid-template-columns: 33.33333% 33.3333% 33.3333%;
+  margin: auto;
+}
+
+main .grid-items .grid {
+  padding: 10px;
+}
+
+main .grid-items .a {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+main .grid-items .b {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+
+main .grid-items .c {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+main .grid-items .d {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.modal-backdrop {
+  display: none !important;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.nav-menu {
+  position: fixed;
+  top: 170px;
+  right: -190px;
+  width: 240px;
+  z-index: 3;
+  background: #a5cb38;
+  background: radial-gradient(circle, #a5cb38 0%, #709407 100%);
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  max-height: 700px;
+  overflow: auto;
+}
+
+.nav-menu li {
+  padding: 8px 15px;
+  padding-left: 10px;
+  overflow: hidden;
+  border-bottom: 1px solid white;
+}
+
+.nav-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.nav-menu li a i {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.25em;
+  min-width: 32px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.nav-menu li a:hover {
+  color: #b8ebff;
+}
+
+.nav-menu:hover {
+  right: 0;
+}
+
 footer {
+  position: relative;
   background: url("../images/footer-image.png") no-repeat center center;
   background-size: cover;
   padding-top: 250px;
@@ -2072,7 +2148,7 @@ footer .copy-right p {
 
 #backToTop {
   position: fixed;
-  left: 20px;
+  right: 20px;
   bottom: 20px;
   width: 50px;
   height: 50px;
@@ -2125,14 +2201,30 @@ footer .copy-right p {
   header #open-menu {
     display: block;
   }
+  header .header-menu.fixed #open-menu {
+    color: #202020;
+  }
+  header .logo img {
+    max-height: 60px;
+  }
+  main .intro-wrapper {
+    padding-top: 175px;
+    padding-bottom: 0;
+  }
   main .intro-wrapper img {
     max-height: 480px;
+  }
+  main .intro-wrapper .title {
+    margin-bottom: 1.5rem;
   }
   main .howworks-wrapper .col-sm-12 .howwork-box {
     margin-bottom: 2.5rem;
   }
   main .howworks-wrapper .col-sm-12:nth-child(2n) .howwork-box {
     margin-top: 0;
+  }
+  main .plans-wrapper {
+    padding-bottom: 0;
   }
   main .plans-wrapper .price-box {
     margin-bottom: 2rem;
@@ -2167,11 +2259,24 @@ footer .copy-right p {
 }
 
 @media (max-width: 768px) {
+  header .header-nav #greenwichTime {
+    text-align: right;
+  }
+  header .header-nav ul.text-right {
+    text-align: center !important;
+    margin-top: 0.5rem;
+  }
   main .title-section .desc {
     max-width: 100%;
   }
+  main .comment-content .cm-reply {
+    display: none;
+  }
   main .nav-menu li {
     width: 33.3333%;
+  }
+  main .page-title {
+    padding: 250px 0 75px 0;
   }
   .wrapper {
     padding: 50px 0;
@@ -2179,20 +2284,34 @@ footer .copy-right p {
 }
 
 @media (max-width: 576px) {
+  header .header-menu.fixed {
+    padding: 0 4%;
+  }
+  main .dash-wrapper .title-box {
+    font-size: 1.25em;
+  }
   main .dash-wrapper .title-box .flexDis {
     text-align: center;
   }
   main .dash-wrapper .title-box .flexDis .fl_left,
   main .dash-wrapper .title-box .flexDis .fl_right {
-    float: unset;
     display: inline-block;
   }
-  main .page-title {
-    padding: 150px 0 75px 0;
+  main .intro-wrapper {
+    padding-top: 230px;
+  }
+  main .page-title h1 {
+    font-size: 1.75em;
   }
   main .tabs {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  main .news-wrapper .news-item .image img {
+    height: 280px;
+  }
+  footer {
+    padding-top: 140px;
   }
 }
 
@@ -2200,12 +2319,26 @@ footer .copy-right p {
   header .menu-aside {
     width: 240px;
   }
+  header .header-nav .col-sm-4.col-md-3 {
+    display: none;
+  }
+  header .header-nav .col-sm-4.col-md-3 + .col-md-4 {
+    display: none;
+  }
+  header .header-nav .ltr-text {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
   main .intro-wrapper .btn {
     padding: 5px 15px;
   }
   main .intro-wrapper .title {
     font-size: 1.5em;
     margin-bottom: 2rem;
+  }
+  main .page-title {
+    padding: 220px 0 50px 0;
   }
   main .title-section .label {
     font-size: 3.5em;
